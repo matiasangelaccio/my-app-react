@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar'
 import{Nav, Form, FormControl,Button,NavDropdown, Container} from 'react-bootstrap'
 import logo from '../src/logo-navbar.png'
+import {FaCartPlus} from 'react-icons/fa'
 function Menunavbar() {
     return (
         <Navbar bg="light" expand="lg">
@@ -32,6 +33,7 @@ function Menunavbar() {
               </NavDropdown>
              
             </Nav>
+            <a><FaCartPlus className='carritoNav' /></a>
             <Form className="d-flex">
               <FormControl
                 type="search"
