@@ -1,9 +1,9 @@
 
 import './App.css';
-import  Menunavbar from './componentes/Navbar';
+import  Menunavbar from './componentes/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './componentes/ItemListContainer';
-import ItemCount from './componentes/ItemCount';
+import ItemListContainer from './componentes/itemlist/ItemListContainer';
+import ItemCount from './componentes/itemlist/ItemCount';
 
 
 
@@ -12,8 +12,8 @@ function App() {
 
     <div className="App">
  < Menunavbar />
- <ItemListContainer  greeting ='Bienvenido a mi tienda' />
- <ItemCount minimo={1} maximo={10} />
+ <ItemListContainer  greeting ='Bienvenido a Sabor SkateShop' />
+ 
       
     </div>
   );

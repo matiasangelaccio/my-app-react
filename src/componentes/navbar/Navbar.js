@@ -3,7 +3,7 @@ import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav, Form, FormControl, Button, NavDropdown, Container } from 'react-bootstrap'
-import logo from '../componentes/logo-navbar.png'
+import logo from '../navbar/logo-navbar.png'
 import CartWidget from './CartWidget';
 
 function Menunavbar() {

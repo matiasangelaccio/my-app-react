@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './ItemCount.css'
 
 const ItemCount = ({minimo, maximo}) => {
     const [count, setCount] = useState(minimo)
@@ -15,11 +16,11 @@ const ItemCount = ({minimo, maximo}) => {
     
     }
     return (
-        <div>
+        <div className='itemCount'>
 
-            <button onClick={removeCount}>-</button>
-            {count}
-            <button onClick={handleCount}>+</button>
+            <button className='buttonItemCount' onClick={removeCount}>-</button>
+           <h3 className='count'>{count}</h3> 
+            <button  className='buttonItemCount'  onClick={handleCount}>+</button>
         </div>
     )
 }
