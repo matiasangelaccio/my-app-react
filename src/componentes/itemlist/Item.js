@@ -8,6 +8,7 @@ const item = ({nombre, imagen, precio, descripcion, stock}) => {
         <div className='divItem'>
              <Card className='cardItem'>
                 <Card.Img variant="top" src="#" alt={imagen} />
+              
                 <Card.Body>
                     <Card.Title>{nombre}</Card.Title>
                     <Card.Text>
