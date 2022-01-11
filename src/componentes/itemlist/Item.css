@@ -2,13 +2,18 @@
     width: 20rem;
     height: 20rem;
     margin: 1rem 0.125rem;
+    margin-bottom: 200px;
 }
 
 .cardItem {
-    height: 20rem;
+    height: 300px;
+    width: 350px;
+    
 }
 
 .card-body {
+    height: 300px;
+    width: 350px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -16,9 +21,18 @@
 
 .buttonCardItem {
     width: 10rem;
+    margin-top: 10px;
 }
 
 .divButtonCardItem {
     flex-direction: column;
     align-self: center;
+
+}
+.imagenProd{
+    height: 300px;
+    width: 350px;
+}
+.buttonCardDetail{
+    margin-top: 5px;
 }
