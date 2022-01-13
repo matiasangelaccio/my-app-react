@@ -10,7 +10,7 @@ const{idDetalle} = useParams()
 useEffect(()=>{
 getFetch 
 .then(resp=>{
-setProducto(resp.find(prod =>parseInt(prod.id) === parseInt(idDetalle)))
+setProducto(resp.find(prod =>(prod.id) === idDetalle))
 setLoading(false);
 })
 },[idDetalle])
@@ -18,7 +18,7 @@ setLoading(false);
     return (
         <div>
           {loading ? 'cargando' :  
-            <ItemDetail  producto={producto} />
+            <ItemDetail  producto={producto}/>
             }
         </div>
     )

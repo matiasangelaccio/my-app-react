@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({minimo, maximo}) => {
+const ItemCount = ({minimo, maximo, onAdd}) => {
     const [count, setCount] = useState(minimo)
     const handleCount = () => {
         (count < maximo) && setCount(prev => prev + 1)
@@ -21,6 +21,8 @@ const ItemCount = ({minimo, maximo}) => {
             <button className='buttonItemCount' onClick={removeCount}>-</button>
            <h3 className='count'>{count}</h3> 
             <button  className='buttonItemCount'  onClick={handleCount}>+</button>
+     
+            
         </div>
     )
 }

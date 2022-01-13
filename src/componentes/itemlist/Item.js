@@ -17,11 +17,11 @@ const item = ({id, nombre, imagen, precio, descripcion, stock }) => {
                         {/* {descripcion} */}
                     </Card.Text>
                     <Card.Title>{precio}</Card.Title>
-                    <ItemCount minimo={1} maximo={stock} stock={stock} />
+                    {/* <ItemCount minimo={1} maximo={stock} stock={stock} /> */}
                     <div className='divButtonCardItem'>
-                        <Button variant="dark" className='buttonCardItem'>Agregar al carrito</Button>
+                    {/* <a href="/"><button className='bn632-hover bn25'>Agregar al carrito</button></a> */}
                         <Link to={`/detalle/${ id }`}>
-                            < Button variant="dark" className='buttonCardDetail'>Detalle del producto</Button>
+                        <a href="/"><button  className='bn632-hover bn25'>Detalle del producto</button></a>
                     </Link>
                 </div>
             </Card.Body>

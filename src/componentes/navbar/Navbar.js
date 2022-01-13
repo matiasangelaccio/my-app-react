@@ -22,20 +22,20 @@ function Menunavbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Link to='/categoria/remeras' href="#action1">Remeras</Link>
-            <Link to='/categoria/buzos' href="#action2">Buzos</Link>
-            <NavLink to='/categoria/pantalones' href="#action3">Pantalones</NavLink>
-            <NavLink to='/categoria/zapatillas' href="#action4">Zapatillas</NavLink>
+            <Link className='navBarProd' to='/categoria/remeras' href="#action1">Remeras</Link>
+            <Link className='navBarProd' to='/categoria/buzos' href="#action2">Buzos</Link>
+            <NavLink className='navBarProd' to='/categoria/pantalones' href="#action3">Pantalones</NavLink>
+            <NavLink className='navBarProd' to='/categoria/zapatillas' href="#action4">Zapatillas</NavLink>
             <NavDropdown title="Accesorios" id="navbarScrollingDropdown">
               <Link to='/categoria/bags'>
-              <NavDropdown.Item href="#action5">Bags</NavDropdown.Item>
+              <NavDropdown.Item className='navBarProd' href="#action5">Bags</NavDropdown.Item>
               </Link>
               <Link to='/categoria/medias'>
-              <NavDropdown.Item href="#action7">Medias y ropa interior</NavDropdown.Item>
+              <NavDropdown.Item className='navBarProd' href="#action7">Medias y ropa interior</NavDropdown.Item>
               </Link>
               <NavDropdown.Divider />
               <Link to='/categoria/skate'>
-              <NavDropdown.Item href="#action8">
+              <NavDropdown.Item className='navBarProd'id='prueba' href="#action8">
                 Skateboarding
               </NavDropdown.Item>
 </Link>
