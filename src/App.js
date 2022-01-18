@@ -7,13 +7,14 @@ import ItemCount from './componentes/itemlist/ItemCount';
 import ItemDetailContainer from './componentes/itemlist/ItemDetailC/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cart from './componentes/cart/Cart';
-
+import { CartContextProvider } from './context/cartContext';
 
 
 function App() {
   return (
 
     <div className="App">
+<CartContextProvider>
       <BrowserRouter>
         < Menunavbar />
         <Routes>
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/categoria/:idCategoria' element={<ItemListContainer />} />
         </Routes>
       </BrowserRouter>
+</CartContextProvider>
     </div>
 
   );

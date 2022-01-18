@@ -1,15 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Card } from "react-bootstrap"
 import ItemCount from '../ItemCount'
 import { Link, NavLink } from 'react-router-dom'
 import './ItemDetail.css'
+import { CartContext } from '../../../context/cartContext'
 
 const ItemDetail = ({ producto }) => {
+  const {CartList, agregarAlCarrito} = useContext(CartContext)
+  console.log(CartList)
   const [show, setShow] = useState(true)
   const onAdd = (count) => {
     setShow(false)
-
+    console.log(count)
+agregarAlCarrito({...producto , count})
   }
   return (
     <div>
