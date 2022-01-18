@@ -1,61 +1,62 @@
 .itemCount {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 0.25rem;
-    width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: auto;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 .buttonItemCount {
-    width: 2.5rem;
-    height: 2.5rem;
-    border: none;
-    background-color: #212529;
-    font-size: 1.3rem;
-    color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: #212529;
+  font-size: 1.3rem;
+  color: white;
 }
 
-.Count{
-    margin: 0 2rem;
+.Count {
+  margin: 0 2rem;
 }
+
 .bn632-hover {
-    width: 160px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:focus {
-    outline: none;
-  }
-  
-  .bn632-hover.bn25 {
-    background-image: linear-gradient(
-      to right,
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn25 {
+  background-image: linear-gradient(to right,
       #29323c,
       #485563,
       #2b5876,
-      #4e4376
-    );
-    box-shadow: 0 4px 15px 0 rgba(37, 96, 168, 0.75);
-  }
+      #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(37, 96, 168, 0.75);
+}

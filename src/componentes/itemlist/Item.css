@@ -1,79 +1,78 @@
 .divItem {
-    width: 20rem;
-    height: 20rem;
-    margin: 1rem 0.125rem;
-    margin-bottom: 250px;
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem 0.125rem;
+  margin-bottom: 250px;
 }
 
 .cardItem {
-    height: 300px;
-    width: 350px;
-    
+  height: 300px;
+  width: 350px;
+
 }
 
 .card-body {
-    height: 300px;
-    width: 350px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+  height: 300px;
+  width: 350px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 .buttonCardItem {
-    width: 10rem;
-    margin-top: 10px;
+  width: 10rem;
+  margin-top: 10px;
 }
 
 .divButtonCardItem {
   margin: 0%;
 
 }
-.imagenProd{
-    height: 300px;
-    width: 350px;
+
+.imagenProd {
+  height: 300px;
+  width: 350px;
 }
 
- 
 
 
-  
-  .bn632-hover {
-    width: 160px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 5px;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:focus {
-    outline: none;
-  }
-  
-  .bn632-hover.bn22 {
-    background-image: linear-gradient(
-      to right,
+
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn22 {
+  background-image: linear-gradient(to right,
       #0ba360,
       #3cba92,
       #30dd8a,
-      #2bb673
-    );
-    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
-  }
+      #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
