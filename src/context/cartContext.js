@@ -1,23 +1,44 @@
 // CREACION DEL CONTEXTO
-import { createContext, useState } from "react";
+import {useState, useContext, createContext } from "react";
 
-export const CartContext = createContext([])
+// CREO EL CONTEXTO
+ const CartContext = createContext([])
+// FUNCION QUE EVITA IMPORTAR EL USECONTEXT EN DONDE QUIERO USARLO
+export function useCartContext(){
+    return useContext(CartContext)
+}
 
 // COMPONENTE QUE MANEJA EL CONTEXTO
 
-export const CartContextProvider = (children) => {
+export const CartContextProvider = ({children}) => {
     // ESTADOS Y FUNCIONES GLOBALES
     const [cartList, setCartList] = useState([])
     function agregarAlCarrito(items) {
+        const indice = cartList.findIndex(i => i.id === items.id)
+// SI EXISTE DEVUELVE EL INDICE SINO -1
+        if(indice > -1){
+const cantVieja = cartList[indice].cantidad
+let cantNueva = cantVieja + items.cantidad
+cartList[indice].cantidad = cantNueva
+let arrayCantActual = [...cartList]
+setCartList(arrayCantActual)
+        }
+        else{
         setCartList([...cartList, items])
+        }
     }
+    function vaciarCarrito(){
+        setCartList([])
+    }
+    console.log(cartList)
     return (
-        <CartContextProvider value={{
+        <CartContext.Provider value={{
             cartList,
-            agregarAlCarrito
+            agregarAlCarrito, 
+            vaciarCarrito
         }}>
             {children}
-        </CartContextProvider>
+        </CartContext.Provider>
     )
 }
 

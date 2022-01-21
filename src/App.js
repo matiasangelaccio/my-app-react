@@ -12,21 +12,20 @@ import { CartContextProvider } from './context/cartContext';
 
 function App() {
   return (
+    <CartContextProvider>
+      <div className="App">
+        <BrowserRouter>
+          < Menunavbar />
+          <Routes>
+            <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer />} />
+            <Route exact path='/' element={<ItemListContainer greeting='Bienvenido a Sabor SkateShop' />} />
+            <Route exact path='/categoria/:idCategoria' element={<ItemListContainer />} />
+          </Routes>
+        </BrowserRouter>
 
-    <div className="App">
-<CartContextProvider>
-      <BrowserRouter>
-        < Menunavbar />
-        <Routes>
-          <Route exact path='/cart' element={<Cart />} />
-          <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer />} />
-          <Route exact path='/' element={<ItemListContainer greeting='Bienvenido a Sabor SkateShop' />} />
-          <Route exact path='/categoria/:idCategoria' element={<ItemListContainer />} />
-        </Routes>
-      </BrowserRouter>
-</CartContextProvider>
-    </div>
-
+      </div>
+    </CartContextProvider>
   );
 }
 

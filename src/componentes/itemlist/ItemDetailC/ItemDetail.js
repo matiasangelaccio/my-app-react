@@ -4,16 +4,15 @@ import { Card } from "react-bootstrap"
 import ItemCount from '../ItemCount'
 import { Link, NavLink } from 'react-router-dom'
 import './ItemDetail.css'
-import { CartContext } from '../../../context/cartContext'
+import { useCartContext } from '../../../context/cartContext'
 
 const ItemDetail = ({ producto }) => {
-  const {CartList, agregarAlCarrito} = useContext(CartContext)
-  console.log(CartList)
+  const { agregarAlCarrito } = useCartContext()
+
   const [show, setShow] = useState(true)
   const onAdd = (count) => {
     setShow(false)
-    console.log(count)
-agregarAlCarrito({...producto , count})
+    agregarAlCarrito({ ...producto, cantidad: count })
   }
   return (
     <div>
@@ -22,8 +21,8 @@ agregarAlCarrito({...producto , count})
       <Card.Title>{producto.descripcion}</Card.Title>
       <Card.Title>{producto.precio}</Card.Title>
       {show ? <ItemCount onAdd={onAdd} minimo={1} maximo={producto.stock} stock={producto.stock} /> :
-        <div> <Link to='/cart'><button class="bn632-hover bn22">Finalizar la compra</button></Link>
-          <Link to='/'><button class="bn632-hover bn20">Seguir comprando</button></Link>
+        <div> <Link to='/cart'><button className="bn632-hover bn22">Finalizar la compra</button></Link>
+          <Link to='/'><button className="bn632-hover bn20">Seguir comprando</button></Link>
         </div>}
     </div>
   )
