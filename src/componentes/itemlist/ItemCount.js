@@ -21,7 +21,7 @@ const ItemCount = ({ minimo, maximo, onAdd }) => {
                 <button className='buttonItemCount' onClick={handleCount}>+</button>
             </div>
             <div>
-                <button onClick={() => onAdd(count)} className='bn632-hover bn25'>Agregar al carrito</button>
+                <button onClick={() => onAdd(count)} className={ count === 0 ? 'disabled' : 'bn632-hover bn25'}>Agregar al carrito</button>
             </div>
         </>
     )

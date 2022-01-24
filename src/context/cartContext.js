@@ -27,15 +27,32 @@ setCartList(arrayCantActual)
         setCartList([...cartList, items])
         }
     }
-    function vaciarCarrito(){
+    const vaciarCarrito = ()=>{
         setCartList([])
     }
     console.log(cartList)
+    const deleteItem = (id)=>{
+        const itemFiltrado = cartList.filter((producto) => producto.id !== id)
+        setCartList(itemFiltrado);
+    }
+    const total = () =>{
+        const totalCarrito = cartList.reduce((prev,curr) => prev + curr.precio * curr.cantidad, 0
+        );
+        return totalCarrito;
+    };
+    const mostrarNumero = () =>{
+        const itemsEnCarrito = cartList.reduce((prev, curr) => prev + curr.cantidad, 0)
+        return itemsEnCarrito
+    
+    }
     return (
         <CartContext.Provider value={{
             cartList,
             agregarAlCarrito, 
-            vaciarCarrito
+            deleteItem,
+            vaciarCarrito,
+            total,
+            mostrarNumero
         }}>
             {children}
         </CartContext.Provider>

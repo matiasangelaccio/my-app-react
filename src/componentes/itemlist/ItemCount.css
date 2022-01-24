@@ -38,6 +38,7 @@
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  
 }
 
 .bn632-hover:hover {
@@ -59,4 +60,11 @@
       #2b5876,
       #4e4376);
   box-shadow: 0 4px 15px 0 rgba(37, 96, 168, 0.75);
+}
+.disabled{
+  margin-top: 20px;
+  opacity:60%;
+}
+.disabled:hover{
+  cursor: not-allowed;
 }

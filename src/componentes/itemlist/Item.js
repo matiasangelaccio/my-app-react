@@ -16,7 +16,7 @@ const item = ({ id, nombre, imagen, precio, descripcion, stock }) => {
                     <Card.Text>
                         {/* {descripcion} */}
                     </Card.Text>
-                    <Card.Title>{precio}</Card.Title>
+                    <Card.Title>${precio}</Card.Title>
                     {/* <ItemCount minimo={1} maximo={stock} stock={stock} /> */}
                     <div className='divButtonCardItem'>
                         {/* <a href="/"><button className='bn632-hover bn25'>Agregar al carrito</button></a> */}

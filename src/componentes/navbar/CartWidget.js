@@ -1,11 +1,16 @@
 import React from 'react'
 import { FaCartPlus } from 'react-icons/fa'
 import './cartWidget.css'
+import { useCartContext } from '../../context/cartContext'
 const CartWidget = () => {
-    return (
+    const { mostrarNumero } = useCartContext()
+    return  (
+<div>
+    <div className='badgeroundedNumber'>{mostrarNumero()}</div>
+        <FaCartPlus className='carrito' />
+       
 
-        <a><FaCartPlus className='carrito' /></a>
-
+  </div>
     )
 }
 
