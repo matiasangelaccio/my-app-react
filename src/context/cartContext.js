@@ -1,6 +1,6 @@
 // CREACION DEL CONTEXTO
 import {useState, useContext, createContext } from "react";
-
+import { getFirestore , collection} from 'firebase/firestore'
 // CREO EL CONTEXTO
  const CartContext = createContext([])
 // FUNCION QUE EVITA IMPORTAR EL USECONTEXT EN DONDE QUIERO USARLO
@@ -45,6 +45,9 @@ setCartList(arrayCantActual)
         return itemsEnCarrito
     
     }
+
+    
+
     return (
         <CartContext.Provider value={{
             cartList,
