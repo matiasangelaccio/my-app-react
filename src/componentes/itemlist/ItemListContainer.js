@@ -3,6 +3,8 @@ import ItemList from './ItemList'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import{getDocs, getFirestore, query, collection, where} from 'firebase/firestore'
+import Spinner from '../spinner/Spinner'
+
 const ItemListContainer = ({ greeting }) => {
 
     const [productos, setProductos] = useState([])
@@ -46,7 +48,7 @@ getDocs(queryCollection)
     return (
         <div className='divItemListContainer'>
             <h1>{greeting}</h1>
-            {loading ? <h3>Aguarde unos segundos</h3> : <ItemList productos={productos} />}
+            {loading ? <h3><Spinner /></h3> : <ItemList productos={productos} />}
         </div>
     )
 }

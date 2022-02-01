@@ -12,7 +12,7 @@ function Menunavbar() {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Link to='/'>
-        <img src={logo} />
+        <img alt='imgLogo' src={logo} />
         </Link>
         <Navbar.Brand href="#"></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

@@ -3,7 +3,6 @@ import './App.css';
 import Menunavbar from './componentes/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './componentes/itemlist/ItemListContainer';
-import ItemCount from './componentes/itemlist/ItemCount';
 import ItemDetailContainer from './componentes/itemlist/ItemDetailC/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cart from './componentes/cart/Cart';

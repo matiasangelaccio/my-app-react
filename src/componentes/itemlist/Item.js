@@ -1,7 +1,5 @@
 import React from 'react'
 import { Card } from "react-bootstrap"
-import { Button } from "react-bootstrap"
-import ItemCount from './ItemCount'
 import './Item.css'
 import { Link } from 'react-router-dom'
 const item = ({ id, nombre, imagen, precio, descripcion, stock }) => {
