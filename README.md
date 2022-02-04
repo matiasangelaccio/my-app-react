@@ -1,15 +1,15 @@
 ## SABOR E-COMMERCE
 This project was created with React Js, it is an e-commerce oriented to generate a good technical functioning of the applied language, without giving so much importance to the UX UI
 
-## for this project the following dependencies were used:
+### for this project the following dependencies were used:
 
-## React Bootstrap : to add styles and visual details
+### React Bootstrap : to add styles and visual details
 
-## React Router DOM : to create routing between components
+### React Router DOM : to create routing between components
 
-## FireBase: to generate interaction with the back end
+### FireBase: to generate interaction with the back end
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
