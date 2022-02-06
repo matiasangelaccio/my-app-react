@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState } from 'react'
 import './cart.css'
 import { useCartContext } from '../../context/cartContext'
@@ -8,6 +8,7 @@ import { addDoc, getFirestore, collection, query, where, documentId, writeBatch,
 
 const Cart = () => {
     const { cartList, deleteItem, vaciarCarrito, total } = useCartContext()
+    const [orden, setOrden] = useState(null);
     const [dataForm, setDataForm] = useState({
         email: '',
         name: '',
@@ -32,15 +33,11 @@ const Cart = () => {
         const db = getFirestore()
         const ordenCollection = collection(db, 'ordenes')
         await addDoc(ordenCollection, orden)
-            .then(resp => console.log(resp.id))
+            .then(resp => {
+                console.log("Order ID:", resp.id)
+                orden.orderId = resp.id;
+            })
             .catch(err => console.log(err))
-        // .finally(()=>console.log([]))
-
-        // const orderDoc = doc(db, 'items', '1')
-        // updateDoc(orderDoc, {
-        //     stock:6
-        // })
-        // actualizar stock
         const queryCollection = collection(db, 'items')
         const queryActualizarStock = query(
             queryCollection, where(documentId(), 'in', cartList.map(it => it.id))
@@ -55,11 +52,11 @@ const Cart = () => {
             .finally(() => console.log('stock actualizado'))
 
         batch.commit()
+
+        setOrden(orden);
     }
 
     function handleChange(e) {
-        // console.log(e.target.email)  
-        // console.log(e.target.name)
         setDataForm({
             ...dataForm,
             [e.target.name]: e.target.value
@@ -67,7 +64,17 @@ const Cart = () => {
 
     }
 
-    console.log(dataForm)
+    if (orden !== null) {
+        return <>
+            Hola {orden.buyer.name}, gracias por tu compra. Registramos correctamente la orden {orden.orderId}.
+            <br></br>
+            <Link to={'/'}>
+                <button className="bn632-hover bn22">Volver al inicio</button>
+            </Link>
+
+        </>
+
+    }
     return (
 
         <div className='divCart'>
@@ -88,12 +95,11 @@ const Cart = () => {
                     <button className='bn632-hover bn28' onClick={() => deleteItem(prod.id)}>X</button>
                 </li>
 
-
-
                 )
             )}
             <div className='divOrder'>
-                <h3>Total${total()}</h3>
+
+                <h5>Complete la siguiente informacion</h5>
                 <form onSubmit={realizarCompra}>
                     <input
                         type='text'
@@ -117,7 +123,8 @@ const Cart = () => {
                         onChange={handleChange}
                         value={dataForm.email}
                     /><br />
-                    <button onClick={realizarCompra} className="bn9"><span>Generar orden</span></button>
+                    <h4>Total a pagar:<br></br>${total()}</h4>
+                    <button onClick={realizarCompra} className="bn632-hover bn22"><span>Generar orden</span></button>
                 </form>
                 <button className='bn632-hover bn28' onClick={vaciarCarrito}>Vaciar carrito</button>
 

@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { useState } from 'react'
 import { Card } from "react-bootstrap"
 import ItemCount from '../ItemCount'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './ItemDetail.css'
 import { useCartContext } from '../../../context/cartContext'
 
@@ -17,7 +17,6 @@ const ItemDetail = ({ producto }) => {
   return (
     <div>
       <Card.Img className='imagenProd' variant="top" src={producto.img} />
-      {/* <Card.Title>{producto.nombre}</Card.Title> */}
       <Card.Title>{producto.descripcion}</Card.Title>
       <Card.Title>${producto.precio}</Card.Title>
       {show ? <ItemCount onAdd={onAdd} minimo={0} maximo={producto.stock} stock={producto.stock} /> :

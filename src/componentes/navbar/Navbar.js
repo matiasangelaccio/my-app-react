@@ -5,14 +5,14 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Nav, Form, FormControl, Button, NavDropdown, Container } from 'react-bootstrap'
 import logo from '../navbar/logo-navbar.png'
 import CartWidget from './CartWidget';
-import {Link, NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Menunavbar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Link to='/'>
-        <img alt='imgLogo' src={logo} />
+          <img alt='imgLogo' src={logo} />
         </Link>
         <Navbar.Brand href="#"></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -28,22 +28,22 @@ function Menunavbar() {
             <NavLink className='navBarProd' to='/categoria/zapatillas' href="#action4">Zapatillas</NavLink>
             <NavDropdown title="Accesorios" id="navbarScrollingDropdown">
               <Link to='/categoria/bags'>
-              <NavDropdown.Item className='navBarProd' href="#action5">Bags</NavDropdown.Item>
+                <NavDropdown.Item className='navBarProd' href="#action5">Bags</NavDropdown.Item>
               </Link>
               <Link to='/categoria/medias'>
-              <NavDropdown.Item className='navBarProd' href="#action7">Medias y ropa interior</NavDropdown.Item>
+                <NavDropdown.Item className='navBarProd' href="#action7">Medias y ropa interior</NavDropdown.Item>
               </Link>
               <NavDropdown.Divider />
               <Link to='/categoria/skate'>
-              <NavDropdown.Item className='navBarProd'id='prueba' href="#action8">
-                Skateboarding
-              </NavDropdown.Item>
-</Link>
+                <NavDropdown.Item className='navBarProd' id='prueba' href="#action8">
+                  Skateboarding
+                </NavDropdown.Item>
+              </Link>
             </NavDropdown>
 
           </Nav>
           <Link to='/cart'>
-          <CartWidget />
+            <CartWidget />
           </Link>
           <Form className="d-flex">
             <FormControl

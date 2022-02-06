@@ -1,8 +1,9 @@
-import React from 'react'
+
 import { useEffect, useState } from 'react'
 import ItemDetail from '../ItemDetailC/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
+import { Spinner } from 'react-bootstrap'
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {loading ? 'cargando' :
+            {loading ? <Spinner/> :
                 <ItemDetail producto={producto} />
             }
         </div>
