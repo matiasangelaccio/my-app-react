@@ -9,6 +9,11 @@ This project was created with React Js, it is an e-commerce oriented to generate
 
 ### FireBase: to generate interaction with the back end
 
+### ReactIcons: to add icons and style
+
+## Demo
+### https://youthful-hoover-e697f7.netlify.app
+
 ### Available Scripts
 
 In the project directory, you can run:
